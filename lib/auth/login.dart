@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:world/auth/UserProfileScreen.dart';
+import 'package:world/screen/home.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -38,7 +38,7 @@ class _MyLoginState extends State<MyLogin> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => UserProfileScreen(user: user),
+              builder: (context) => Home(user: user),
             ),
           );
         } else {
@@ -69,7 +69,7 @@ class _MyLoginState extends State<MyLogin> {
             Container(
               padding: const EdgeInsets.only(left: 35, top: 130),
               child: const Text(
-                'Save\nSmart',
+                'EMart',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 33,

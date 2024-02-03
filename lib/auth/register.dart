@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:world/auth/UserProfileScreen.dart';
+import 'package:world/screen/home.dart';
 
 class MyRegister extends StatefulWidget {
-  const MyRegister({Key? key}) : super(key: key);
+  const MyRegister({super.key});
 
   @override
   _MyRegisterState createState() => _MyRegisterState();
@@ -42,7 +42,7 @@ class _MyRegisterState extends State<MyRegister> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => UserProfileScreen(user: user),
+              builder: (context) => Home(user: user),
             ),
           );
         } else {
